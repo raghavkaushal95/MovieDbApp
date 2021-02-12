@@ -466,7 +466,7 @@ movie_template = `
                   `;
 
       document.getElementById("film").innerHTML = movie_template;
-      jnjnjnj
+    
   // document.querySelector(".singleMovie").appendChild(btn2);
      var mov_img = document.querySelector(".movieImage"); //reference_node
   //   mov_img.insertBefore(btn2,mov_img);
