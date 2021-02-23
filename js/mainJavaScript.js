@@ -282,11 +282,79 @@ let new_Head = document.createElement('h2');
 function myFunction2()   // //simply returns the results from the particular page when search is performed.
 {
   var searchQuery=   document.querySelector(".MoviesearchTerm").value;
+
+    var search_x = document.querySelector(".search");
   document.getElementById("film").innerHTML ="";
 
+
+
+/*
+
+
+      document.getElementById("film").innerHTML = movie_template;
+
+// document.querySelector(".singleMovie").appendChild(btn2);
+     var mov_img = document.querySelector(".movieImage"); //reference_node
+  //   mov_img.insertBefore(btn2,mov_img);
+ mov_img.parentNode.insertBefore(btn2,mov_img);
+
+
+
+
+
+       var btn2 = document.createElement("BUTTON");
+ //var btn2 = document.createElement("BUTTON");
+ btn2.innerHTML="Go Back to previous";
+    btn2.id='btnerx';
+    document.getElementById("film").appendChild(btn2);
+    document.getElementById("btnerx").onclick = function()
+    {
+        //window.history.back();
+        history.go(-1);
+       // document.getElementById("searcher").innerHTML="";
+       //the films <div> code basically should show film popularity results again(callling fecthResults funtion again)
+       // fetchMovies();
+      // The button should disappear as soon as the popularity results show up.
+       // btner.remove();
+     //   new_div.remove();
+
+    };
+
+
+
+
+
+
+*/
+//var search_x = document.querySelector(".search");
+
+
   new_Head.innerHTML=" Particular Movie Search Results for "+searchQuery;
-      document.body.appendChild(new_Head);
+    //  document.body.appendChild(new_Head);
+     search_x.parentNode.insertBefore(new_Head,search_x);
       console.log(searchQuery);
+
+
+var btn3 =document.createElement("BUTTON");
+btn3.innerHTML="Go Back Previous";
+
+btn3.id ='btnBald';
+
+search_x.parentNode.insertBefore(btn3,search_x);
+
+document.getElementById("btnBald").onclick =  function()
+  {
+
+    history.go(0);
+
+
+  }
+
+
+
+
+
+
 
       fetch("https://api.themoviedb.org/3/search/movie?api_key=04c35731a5ee918f014970082a0088b1&query="+searchQuery)
 
@@ -466,11 +534,11 @@ movie_template = `
                   `;
 
       document.getElementById("film").innerHTML = movie_template;
-    
-  // document.querySelector(".singleMovie").appendChild(btn2);
+
+// document.querySelector(".singleMovie").appendChild(btn2);
      var mov_img = document.querySelector(".movieImage"); //reference_node
   //   mov_img.insertBefore(btn2,mov_img);
-  mov_img.parentNode.insertBefore(btn2,mov_img);
+ mov_img.parentNode.insertBefore(btn2,mov_img);
 
 
     });
