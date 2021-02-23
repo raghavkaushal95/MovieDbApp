@@ -105,6 +105,7 @@ function myFunction()    //simply returns the results from the homepage when sea
         var old_H = document.querySelector(".hub");
        if(document.body.contains(document.querySelector('.hub')))
            {
+             //British Accent
                console.log("ifloop");
                old_H.remove();
             // document.querySelector(".hub").innerHTML="";
